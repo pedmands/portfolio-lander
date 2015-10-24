@@ -76,10 +76,27 @@ get_header(); ?>
 				</div><!-- indent -->
 			</section><!-- what -->
 
+
+
 			<section id="portfolio">
-				<div class="indent clear"><h2 class="section-title">Work // Portfolio</h2>
-					Portfolio Posts.</div>
-			</section><!-- work -->
+				<div class="indent clear">
+				<h2 class="section-title">WORK // PORTFOLIO</h2>
+					<div class="portfolio_nav">
+						<a class="websites">Websites</a> | 
+						<a class="print">Print</a> | 
+						<a class="identity">Identity</a>
+					</div>
+				
+					<div id="showcases">
+						<?php
+						get_template_part('portfolio');
+						?>
+					</div><!-- showcases -->
+					
+				</div><!-- indent -->
+			</section><!-- portfolio -->
+
+
 
 			<section id="resume">
 			Like what you see?
@@ -89,32 +106,36 @@ get_header(); ?>
 			<section id="why">
 				<div class="indent clear">
 					<h2 class="section-title">Why // Hire Me</h2>
-					Why work with me?
-					<ul>
-						
+					<ul class="why-list">
 						<li>
 							<i class="fa fa-bolt"></i>
 							<h3 class="quality-title">Creative Vision</h3>
+							I think, see, and speak with visual fleuncy, helping to imagine new perspectives and aesthetics. Basically, I dream big.
 						</li>
 						<li>
 							<i class="fa fa-fire-extinguisher"></i>
 							<h3 class="quality-title">Problem-Solving Skills</h3>
+							Although programming has made me more pragmatic, I've always had a knack for trouble-shooting and conflict resolution.
 						</li>
 						<li>
 							<i class="fa fa-tachometer"></i>
 							<h3 class="quality-title">Inner Drive</h3>
+							I am an autodidact, relentlessly pursuing old knowledge and new concepts. I am a passionate and dedicated person.
 						</li>
 						<li>
 							<i class="fa fa-sliders"></i>
 							<h3 class="quality-title">Self-Moderation</h3>
+							My passions I temper with mindful practices, both mental and physical in nature. I meditate and exercise regularly.
 						</li>
 						<li>
 							<i class="fa fa-hand-peace-o"></i>
 							<h3 class="quality-title">Universal Friendliness</h3>
+							With mindfulness comes compassion and respect for all others. I love meeting and connecting with new people, everyday.
 						</li>
 						<li>
 							<i class="fa fa-diamond"></i>
 							<h3 class="quality-title">Professional Class</h3>
+							I always conduct myself with courtesy and civility when necessary. On the other hand, I know when it's okay to let my hair down.
 						</li>
 					</ul>
 				</div>

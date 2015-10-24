@@ -26,36 +26,28 @@
 
 
 	<?php if ( is_home() && !is_paged() ) : ?>
-
-		
-
 		<header id="masthead" class="site-header fullheight" role="banner">
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<div class="nav-logo"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-		<div class="nav-logo"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-		
 	<?php else : ?>
 		<header id="masthead" class="site-header" role="banner">
+	<?php endif; ?>
 
-		
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<div class="nav-logo"><h1><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1></div>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	<?php endif; ?>
-	
 			
-
-
+			<?php
+			if (is_front_page()){
+				wp_nav_menu( array('menu' => 'Front Page Menu' ));
+			} else {
+				wp_nav_menu( array('theme_location' => 'primary', 'menu_id' => 'primary-menu' )); 
+			}
+			?>
+		</nav><!-- #site-navigation -->
+			
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+<?php if ( is_home() && !is_paged() ) : ?>
 	<div class="site-branding">
 			<div class="title-box">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -63,3 +55,4 @@
 				<a href="#who" class="logo-box"></a>
 			</div><!-- title-box -->
 		</div><!-- .site-branding -->
+		<?php endif; ?>

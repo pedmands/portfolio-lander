@@ -1,7 +1,6 @@
 body a {
 	text-decoration: none;
 }
-
 /* CONTENT AREA */
 #content {
 	padding-bottom: 0;
@@ -25,7 +24,6 @@ body a {
 	background: #fff;
 	background: hsl(0, 0%, 100%);
 	padding-left: 0;
-	float: none;
 	margin-left: 0;
 	z-index: 100;
 }
@@ -66,7 +64,7 @@ body a {
     display: block;
     color: #404040;
     padding: 1rem;
-    margin: 0 2rem 2rem 0;
+    margin: 0;
     text-decoration: none;
     -webkit-column-break-inside: avoid;
                    break-inside: avoid-column;
@@ -115,9 +113,11 @@ body a {
 
 
 /* PORTFOLIO */
-#portfolio {
-	padding: 4rem 0;
-}
+/* See Parent Theme */
+
+
+
+
 /* RESUME */
 #resume {
 	padding: 4rem 0;
@@ -144,6 +144,39 @@ body a {
 #why {
 	padding: 4rem 0;
 }
+.why-list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.why-list li {
+    text-align: justify;
+    display: inline-block;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 1rem;
+    width:33%;
+}
+.why-list i {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+}
+.why-list h3 {
+    text-align: center;
+}
+@media screen and (max-width: 1170px) {
+    .why-list li {
+        margin: 2rem;
+    }
+}
+@media screen and (max-width: 860px) {
+    .why-list li {
+        display: block;
+        width: 100%;
+    }
+}
 /* CONTACT */
 #contact {
 	padding: 4rem 0;
@@ -161,20 +194,20 @@ body a {
    .front-left {
         width: 50%;
         float: left;
-        padding-right: 4rem;
+        padding-right: 1rem;
     }
 
     .front-right {
         width: 50%;
         float: right;
-        padding-left: 4rem;
+        padding-left: 1rem;
 		text-align: right;
     }
 }
 /* Indent */
 .indent {
-    max-width: 1000px;
     margin: 0 auto;
+    padding:0 4rem;
 }
 
 
