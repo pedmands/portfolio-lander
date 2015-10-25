@@ -1,4 +1,6 @@
 <?php
+
+
 // Websites
 $websites = array(
 	'post_type' => 'showcases',
@@ -8,7 +10,7 @@ $websites = array(
 			'field' => 'slug',
 			'terms' => 'website',
 			),),
-	'posts_per_page' => 4,
+	'posts_per_page' => 6,
 	'orderby' => 'rand'
 	);
 
@@ -16,9 +18,11 @@ $portfolio_sites = new WP_Query($websites);
 echo '<aside id="websites" class="clear tab">';
 while ( $portfolio_sites->have_posts() ) : $portfolio_sites->the_post();
     echo '<div class="portfolio">';
+    echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
     the_post_thumbnail();
     echo '<div class="entry-content">';
     echo '<h1 class="entry-title">' . get_the_title() . '</h1>';
+    echo '</a>';
     echo '</div>';
     echo '</div>';
 endwhile;

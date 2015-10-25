@@ -20,10 +20,10 @@
 				<?php echo get_the_term_list($post->ID, 'project-type', '<h3>', '</h3><h3>', '</h3>' ); ?>
 			</div>
 			<div class="languages">
-				<?php echo get_the_term_list($post->ID, 'languages', '<h3>Languages</h3>', ',', '' ); ?>
+				<?php echo get_the_term_list($post->ID, 'languages', '<h3>Languages</h3>', ', ', '' ); ?>
 			</div>
 			<div class="software">
-				<?php echo get_the_term_list($post->ID, 'software', '<h3>Software</h3>', ',', '' ); ?>
+				<?php echo get_the_term_list($post->ID, 'software', '<h3>Software</h3>', ', ', '' ); ?>
 			</div>
 		</div><!-- taxonomies -->
 	</header><!-- .entry-header -->

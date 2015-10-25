@@ -47,76 +47,100 @@ body a {
 
 /* WHAT */ 
 #what {
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
 }
 #what .section-title {
     margin-bottom: 1rem;
     border-bottom: 2px solid #ccc;
 }
-
 .what-list {
-    margin: 1rem -4rem 0 -2rem;
     padding: 0;
     list-style: none;
+    text-align: justify;
 }
-
 .what-list li {
     display: block;
     color: #404040;
-    padding: 1rem;
-    margin: 0;
+    padding: .1rem;
+    margin-bottom: 2rem;
     text-decoration: none;
     -webkit-column-break-inside: avoid;
                    break-inside: avoid-column;
 }
-
 .what-list li,
 .what-list li a,
 .what-list li h3 {
     transition: all .5s linear;
 }
-
 .what-list li:hover {
     background: cornsilk;
 }
 .what-title {
     margin-bottom: 1rem;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     line-height: 1em;
+    text-align: center;
+}
+.what-list p {
+    margin: 0;
 }
 .what-list .more-link {
     text-decoration: underline;
+    padding-top: 15px;
+    display: inline-block;
 }
-
+/* WHAT ICONS */
+.what-title::before {
+    font-family: 'fontawesome';
+    margin-right:15px;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#web-design::before {
+    content: '\f121';
+}
+#graphic-design::before {
+    content: '\f1fc';
+}
+#programming::before {
+    content: '\f11c';
+}
+#user-interface::before {
+    content: '\f277';
+}
 /* WHAT RESPONSIVE */ 
-
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 650px) {
     .what-title {
         margin-bottom: 0;
-        margin-right: 10%;
-        width: 40%;
+        padding-right: 10px;
+        width:35%;
         float: left;
+        font-size: 25px;
     }
     .what-lede {
-        width: 50%;
+        width:65%;
         float: left;
     }
-    
+    .what-title::before {
+        display: block;
+        margin-right:0;
+    }
 }
 @media screen and (min-width: 950px) {
     .what-list {
         -webkit-column-count: 2;
                 column-count: 2;
     }
+    .what-title {
+        font-size: 20px;
+    }
+    
 }
-
-
 /* PORTFOLIO */
 /* See Parent Theme */
-
-
-
 
 /* RESUME */
 #resume {
@@ -143,6 +167,11 @@ body a {
 /* WHY HIRE ME */
 #why {
 	padding: 4rem 0;
+    color: #000;
+}
+#why .section-title {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ccc;
 }
 .why-list {
     list-style-type: none;
@@ -156,25 +185,30 @@ body a {
     margin: 0;
     margin-top: 2rem;
     padding: 1rem;
-    width:33%;
+    width: 45%;
 }
 .why-list i {
     display: block;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
 }
 .why-list h3 {
     text-align: center;
 }
-@media screen and (max-width: 1170px) {
+@media screen and (min-width: 860px) {
     .why-list li {
-        margin: 2rem;
+        margin: 1rem;
     }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 750px) {
     .why-list li {
         display: block;
         width: 100%;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .why-list li {
+        max-width:30%;
     }
 }
 /* CONTACT */
@@ -182,6 +216,20 @@ body a {
 	padding: 4rem 0;
 	background: cornsilk;
 	color: #000;
+}
+#contact .section-title {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #000;
+}
+#contact ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+#contact li {
+    display: inline-block;
+    margin: 0 2rem;
 }
 .front-left,
 .front-right {
@@ -201,7 +249,7 @@ body a {
         width: 50%;
         float: right;
         padding-left: 1rem;
-		text-align: right;
+		
     }
 }
 /* Indent */
@@ -214,7 +262,7 @@ body a {
 @media screen and (max-width: 1099px) {
     .indent {
         margin: 0;
-        padding: 0 4rem;
+        padding: 0 2rem;
     }
 }
 

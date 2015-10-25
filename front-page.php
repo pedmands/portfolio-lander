@@ -61,7 +61,7 @@ get_header(); ?>
 							$what_query->the_post();
 							echo '<li class="clear">';
 							echo '<a href="' . get_permalink() . '" title="Learn more about ' . get_the_title() . '">';
-							echo '<h3 class="what-title">' . get_the_title() . '</h3>';
+							echo '<h3 class="what-title" id="' . $post->post_name . '">' . get_the_title() . '</h3>';
 							echo '</a>';
 							echo '<div class="what-lede">';
 							the_content('READ ON <i class="fa fa-angle-double-right"></i>');
@@ -82,8 +82,8 @@ get_header(); ?>
 				<div class="indent clear">
 				<h2 class="section-title">WORK // PORTFOLIO</h2>
 					<div class="portfolio_nav">
-						<a class="websites">Websites</a> | 
-						<a class="print">Print</a> | 
+						<a class="websites">Web Design</a> / 
+						<a class="print">Print</a> / 
 						<a class="identity">Identity</a>
 					</div>
 				
@@ -149,9 +149,7 @@ get_header(); ?>
 						while ( $query->have_posts() ) {
 							$query->the_post();
 							echo '<h2 class="section-title">' . get_the_title() . '</h2>';
-							echo '<div class="entry-content">';
 							the_content();
-							echo '</div>';
 						}// while
 					} // if
 					

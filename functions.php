@@ -7,7 +7,6 @@
  		wp_enqueue_style('lander-styles', get_stylesheet_directory_uri() . '/lander-style.css');
  		wp_enqueue_script('jqueryUI', get_stylesheet_directory_uri() . '/scripts/jquery-ui.min.js');
  		wp_enqueue_script('portfolio-script', get_stylesheet_directory_uri() . '/portfolio.js');
-
  	}
  }
 
