@@ -8,6 +8,9 @@
  		wp_enqueue_script('jqueryUI', get_stylesheet_directory_uri() . '/scripts/jquery-ui.min.js');
  		wp_enqueue_script('portfolio-script', get_stylesheet_directory_uri() . '/portfolio.js');
  	}
+ 	if (is_archive()) {
+ 		wp_enqueue_style('archive-styles', get_stylesheet_directory_uri() . '/archive.css');
+ 	}
  }
 
  add_action('wp_enqueue_scripts', 'lander_scripts');
