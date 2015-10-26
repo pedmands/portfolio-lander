@@ -64,7 +64,7 @@ get_header(); ?>
 							echo '<h3 class="what-title" id="' . $post->post_name . '">' . get_the_title() . '</h3>';
 							echo '</a>';
 							echo '<div class="what-lede">';
-							the_content('READ ON <i class="fa fa-angle-double-right"></i>');
+							the_content('Read more <i class="fa fa-angle-double-right"></i>');
 							echo '</div>';
 							echo '</li>';
 						}
@@ -82,9 +82,9 @@ get_header(); ?>
 				<div class="indent clear">
 				<h2 class="section-title">WORK // PORTFOLIO</h2>
 					<div class="portfolio_nav">
-						<a class="websites">Web Design</a> / 
-						<a class="print">Print</a> / 
-						<a class="identity">Identity</a>
+						<a class="websites">WEB</a> / 
+						<a class="print">PRINT</a> 
+					<!-- 	<a class="identity">Identity</a> -->
 					</div>
 				
 					<div id="showcases">
